@@ -14,7 +14,7 @@ class CommentsController < ApplicationController
     @blog_post = BlogPost.find(params[:blog_post_id])
     @comment = Comment.find(params[:id])
   end
-  
+
   def update
     @comment = Comment.find(params[:id])
     respond_to do |format|
@@ -37,6 +37,6 @@ class CommentsController < ApplicationController
   private
 
   def comment_params
-    params.require(:comment).permit(:author, :comment_entry, :blog_post_id)
+    params.require(:comment).permit(:author, :comment_entry, :blog_post_id, :user_id)
   end
 end
