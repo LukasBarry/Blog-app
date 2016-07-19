@@ -11,7 +11,7 @@
         </div>
         <div class="panel-body">
           <p><span class="posted-at"><%= blog_post.created_at.strftime('%m/%d/%Y at %I:%M%p') %></span>:</p>
-          <%= blog_post.blog_entry[0..200]%>...[<%= link_to "READ MORE", blog_post %>]
+          <%= blog_post.blog_entry[0..200]%>...<%= link_to "READ MORE", blog_post %>
         </div>
         <div class="panel-footer">
           <%= link_to "Edit", edit_blog_post_path(blog_post), class: "btn btn-warning" %>
